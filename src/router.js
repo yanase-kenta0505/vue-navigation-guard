@@ -3,7 +3,16 @@ import Home from './components/home.vue'
 import About from './components/About.vue'
 
 const routes = [
-  { path: '/', name: 'home', component: Home },
+  {
+    path: '/',
+    name: 'home',
+    component: Home,
+    beforeEnter: (to, from, next) => {
+      setTimeout(function () {
+        next()
+      }, 5000)
+    }
+  },
   { path: '/about', name: 'about', component: About },
 
 ]
