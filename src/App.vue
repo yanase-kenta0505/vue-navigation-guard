@@ -2,6 +2,7 @@
 </script>
 
 <template>
-  <router-view></router-view>
+  <div style="width: 100%; background-color: aqua;"></div>
+  <router-view />
 </template>
 
