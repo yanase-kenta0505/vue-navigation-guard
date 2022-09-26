@@ -3,6 +3,10 @@ import Home from './components/home.vue'
 import About from './components/About.vue'
 import { useStore } from './store/index'
 
+// 参考
+// https://github.com/vuejs/pinia/discussions/971
+// https://pinia.vuejs.org/core-concepts/outside-component-usage.html#single-page-applications
+// https://v3.router.vuejs.org/guide/advanced/navigation-guards.html#global-before-guards
 
 const routes = [
   {
