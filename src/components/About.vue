@@ -1,10 +1,16 @@
 <script setup>
-import { ref } from 'vue';
+import { useStore } from '../store/index'
+import { storeToRefs } from 'pinia'
 import Color from './Color.vue';
-const isShow = ref(true)
+
+const store = useStore()
+const { isShow } = storeToRefs(store)
+const toggleIsShow = () => {
+  store.toggleIsShow()
+}
 </script>
   
 <template>
-    <h1 v-if="isShow">about page</h1>
-    <Color v-else/>
+  <h1 v-if="isShow" @click="toggleIsShow">about page</h1>
+  <Color v-else />
 </template>
